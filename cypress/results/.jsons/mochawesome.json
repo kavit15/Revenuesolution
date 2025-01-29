@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-29T10:25:12.022Z",
+    "end": "2025-01-29T10:25:23.627Z",
+    "duration": 11605,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f05462fe-ad08-4d4f-a147-717243982d65",
+      "title": "",
+      "fullFile": "cypress\\e2e\\nswmedia.cy.js",
+      "file": "cypress\\e2e\\nswmedia.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2a8f75f0-8499-4354-baeb-e04906db1101",
+          "title": "NSW Government Media Releases Filter Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that the \"Ministers\" accordion is visible and clickable",
+              "fullTitle": "NSW Government Media Releases Filter Test Verify that the \"Ministers\" accordion is visible and clickable",
+              "timedOut": null,
+              "duration": 4685,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Use the MediaReleasesPage object to interact with the Ministers accordion\nmediaReleasesPage.getMinistersAccordionButton().should('be.visible') // Ensure the button is visible\n.click(); // Click the accordion button",
+              "err": {},
+              "uuid": "37c286ad-fd38-4e59-a77a-7871c1c588cf",
+              "parentUUID": "2a8f75f0-8499-4354-baeb-e04906db1101",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select the desired value checkbox to filter and apply the filters",
+              "fullTitle": "NSW Government Media Releases Filter Test Select the desired value checkbox to filter and apply the filters",
+              "timedOut": null,
+              "duration": 4517,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Select the checkbox for the Premier\nmediaReleasesPage.selectCheckboxByValue('Premier');\n// Apply the filters after selecting the checkbox\nmediaReleasesPage.clickApplyFiltersButton();\ncy.screenshot('Page after filter');",
+              "err": {},
+              "uuid": "e8e303dd-2530-409c-918c-4be1570ab1e1",
+              "parentUUID": "2a8f75f0-8499-4354-baeb-e04906db1101",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "37c286ad-fd38-4e59-a77a-7871c1c588cf",
+            "e8e303dd-2530-409c-918c-4be1570ab1e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9202,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

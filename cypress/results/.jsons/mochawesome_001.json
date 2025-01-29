@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-01-29T10:36:21.834Z",
+    "end": "2025-01-29T10:36:27.536Z",
+    "duration": 5702,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "1d992f8f-b959-44db-ba8c-e345391f4735",
+      "title": "",
+      "fullFile": "cypress\\e2e\\nswmedia.cy.js",
+      "file": "cypress\\e2e\\nswmedia.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5bf8e333-0de1-4a3c-87ee-deb7e3ca9ba0",
+          "title": "NSW Government Media Releases Filter Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that the \"Ministers\" accordion is visible and clickable",
+              "fullTitle": "NSW Government Media Releases Filter Test Verify that the \"Ministers\" accordion is visible and clickable",
+              "timedOut": null,
+              "duration": 3269,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Use the MediaReleasesPage object to interact with the Ministers accordion\nmediaReleasesPage.getMinistersAccordionButton().should('be.visible') // Ensure the button is visible\n.click(); // Click the accordion button",
+              "err": {
+                "message": "AbortError: The following error originated from your application code, not from Cypress. It was caused by an unhandled promise rejection.\n\n  > The user aborted a request.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `NSW Government Media Releas...`",
+                "estack": "AbortError: The following error originated from your application code, not from Cypress. It was caused by an unhandled promise rejection.\n\n  > The user aborted a request.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `NSW Government Media Releas...`",
+                "diff": null
+              },
+              "uuid": "41496dee-a90c-4f4d-82c0-c21877b0fc49",
+              "parentUUID": "5bf8e333-0de1-4a3c-87ee-deb7e3ca9ba0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select the desired value checkbox to filter and apply the filters",
+              "fullTitle": "NSW Government Media Releases Filter Test Select the desired value checkbox to filter and apply the filters",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Select the checkbox for the Premier\nmediaReleasesPage.selectCheckboxByValue('Premier');\n// Apply the filters after selecting the checkbox\nmediaReleasesPage.clickApplyFiltersButton();\ncy.screenshot('Page after filter');",
+              "err": {},
+              "uuid": "76c26472-290b-4e1a-b140-b46a2f66b52f",
+              "parentUUID": "5bf8e333-0de1-4a3c-87ee-deb7e3ca9ba0",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "41496dee-a90c-4f4d-82c0-c21877b0fc49"
+          ],
+          "pending": [],
+          "skipped": [
+            "76c26472-290b-4e1a-b140-b46a2f66b52f"
+          ],
+          "duration": 3269,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
